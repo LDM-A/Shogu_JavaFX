@@ -1,0 +1,59 @@
+Board (Bord):
+
+initializeBoard(): Initialiseert het bord met lege vakjes.
+
+isValidMove(move): Controleert of een zet geldig is op het bord.
+
+makeMove(move): Voert een zet uit op het bord.
+
+isGameOver(): Controleert of het spel voorbij is.
+
+getWinner(): Geeft de winnende speler terug als het spel voorbij is.
+
+displayBoard(): Toont de huidige staat van het bord.
+
+
+
+
+Stone (Steen):
+
+getColor(): Geeft de kleur van de steen terug.
+
+getPosition(): Geeft de positie van de steen op het bord terug.
+
+setPosition(position): Stelt de positie van de steen in op het bord.
+
+
+
+
+Player (Speler):
+
+getColor(): Geeft de kleur van de speler terug.
+
+makeMove(): Laat de speler een zet maken.
+
+
+
+Move (Zet):
+
+getStone(): Geeft de steen terug die wordt verplaatst.
+
+getAction(): Geeft de actie (beweging of duwen) terug die wordt uitgevoerd.
+
+
+
+
+Game (Spel):
+
+startGame(): Start het spel.
+
+playTurn(player): Voert een beurt uit voor de opgegeven speler.
+
+switchPlayer(): Schakelt naar de volgende speler.
+
+displayWinner(): Toont de winnaar van het spel.
+
+
+
+Main (Hoofd):
+main(String[] args): De hoofdmethode die het spel initialiseert en uitvoert.
