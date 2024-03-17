@@ -1,6 +1,6 @@
 package MVPGlobal.View.StartScreen;
 
-import MVPGlobal.Model.*;
+import MVPGlobal.Model.Board;
 import MVPGlobal.View.*;
 import MVPGlobal.View.MainScreen.MainScreenPresenter;
 import MVPGlobal.View.MainScreen.MainScreenView;

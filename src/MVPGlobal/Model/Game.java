@@ -1,7 +1,5 @@
 package MVPGlobal.Model;
 
-import java.util.List;
-
 public class Game {
     private Board board;
     private Player player1;

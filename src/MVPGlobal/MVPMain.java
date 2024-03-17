@@ -1,7 +1,7 @@
 package MVPGlobal;
 
+import MVPGlobal.Model.Board;
 import MVPGlobal.View.StartScreen.*;
-import MVPGlobal.Model.*;
 import MVPGlobal.View.*;
 import javafx.application.Application;
 import javafx.scene.*;
