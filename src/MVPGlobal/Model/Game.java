@@ -41,11 +41,19 @@ public class Game {
             default: return String.format("Invalid");
         }
     }
-    public int getHighScores(){
-        return 0;
+    public int getHighScores(int numberPlayer){
+        switch (numberPlayer){
+            case 1: return scorePlayer1 ;
+            case 2: return scorePlayer2;
+            // negative score is returned when an error is made
+            default: return -1;
+        }
     }
+    public Game resetGame(Game game){
+        game.scorePlayer2 = 0;
+        game.scorePlayer1 = 0;
+        game.amountOfMoves = 0;
 
-    public Game newGame(){
-        return new Game(board, player1, player2, 0);
+        return game;
     }
 }
