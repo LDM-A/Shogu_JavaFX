@@ -1,6 +1,5 @@
 package MVPGlobal.View.InfoScreen;
 
-import MVPGlobal.Model.MVPModel;
 import MVPGlobal.View.UISettings;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;

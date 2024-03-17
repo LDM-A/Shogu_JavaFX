@@ -15,7 +15,7 @@ public class StartScreenPresenter {
     private StartScreenView view;
     private UISettings uiSettings;
 
-    public StartScreenPresenter(MVPModel model, StartScreenView view, UISettings uiSettings) {
+    public StartScreenPresenter(Board model, StartScreenView view, UISettings uiSettings) {
         this.model = model;
         this.view = view;
         this.uiSettings = uiSettings;
