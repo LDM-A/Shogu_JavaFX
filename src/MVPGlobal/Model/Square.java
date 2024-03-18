@@ -9,6 +9,9 @@ public class Square {
         this.stone = null;
     }
 
+    public Square(Stone stone) {
+        this.stone = stone;
+    }
     public Stone getPiece() {
         return stone;
     }
