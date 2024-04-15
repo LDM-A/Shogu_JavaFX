@@ -10,7 +10,7 @@ public class Stone {
     public StoneColour getColour() {
         return colour;
     }
-    public void setColor(StoneColour coloru) {
+    public void setColor(StoneColour colour) {
         this.colour = colour;
     }
 }

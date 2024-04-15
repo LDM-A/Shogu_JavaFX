@@ -12,6 +12,7 @@ public class Square {
     public Square(Stone stone) {
         this.stone = stone;
     }
+
     public Stone getPiece() {
         return stone;
     }
@@ -22,5 +23,9 @@ public class Square {
 
     public boolean isEmpty() {
         return stone == null;
+    }
+
+    public Stone getStone() {
+        return stone;
     }
 }

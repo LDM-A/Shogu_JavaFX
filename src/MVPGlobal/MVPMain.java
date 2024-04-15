@@ -18,8 +18,8 @@ public class MVPMain extends Application {
          UISettings uiSettings = new UISettings();
          Board model = new Board();
          StartScreenView view = new StartScreenView(uiSettings);
-         StartScreenPresenter presenter = new StartScreenPresenter(model, view, uiSettings);
-         Scene scene = new Scene(view);
+         StartScreenPresenter presenter = new StartScreenPresenter(view, uiSettings);
+            Scene scene = new Scene(view);
          if (uiSettings.styleSheetAvailable()){
              try {
                  scene.getStylesheets().add(uiSettings.getStyleSheetPath().toUri().toURL().toString());
@@ -28,8 +28,8 @@ public class MVPMain extends Application {
              }
          }
          primaryStage.setScene(scene);
-         primaryStage.setHeight(uiSettings.getLowestRes() / 4);
-         primaryStage.setWidth(uiSettings.getLowestRes() / 4);
+         primaryStage.setHeight((double) uiSettings.getLowestRes() / 4);
+         primaryStage.setWidth((double) uiSettings.getLowestRes() / 4);
          primaryStage.setTitle(uiSettings.getApplicationName());
          if (Files.exists(uiSettings.getApplicationIconPath())) {
               try {
@@ -45,6 +45,6 @@ public class MVPMain extends Application {
      }
 
     public static void main(String[] args) {
-        //launch(args);
-    }
+        Application.launch(args);
+     }
 }

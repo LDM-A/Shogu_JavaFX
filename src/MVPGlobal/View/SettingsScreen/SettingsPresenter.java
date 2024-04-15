@@ -1,6 +1,5 @@
 package MVPGlobal.View.SettingsScreen;
 
-import MVPGlobal.Model.*;
 import MVPGlobal.View.UISettings;
 import javafx.event.*;
 import javafx.scene.input.MouseEvent;
@@ -13,17 +12,16 @@ import java.nio.file.Paths;
 
 public class SettingsPresenter {
 
-    private MVPModel model;
     private SettingsView view;
     private UISettings uiSettings;
 
-    public SettingsPresenter(MVPModel model, SettingsView view, UISettings uiSettings) {
-        this.model = model;
+    public SettingsPresenter(SettingsView view, UISettings uiSettings) {
         this.view = view;
         this.uiSettings = uiSettings;
         updateView();
         EventHandlers();
     }
+
 
     private void updateView() {
     }

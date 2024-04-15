@@ -1,9 +1,8 @@
 package MVPGlobal.View.StartScreen;
 
-import MVPGlobal.Model.Board;
 import MVPGlobal.View.*;
-import MVPGlobal.View.MainScreen.MainScreenPresenter;
 import MVPGlobal.View.MainScreen.MainScreenView;
+import MVPGlobal.View.MainScreen.MainScreenPresenter;
 import javafx.event.*;
 import javafx.scene.control.Alert;
 import javafx.stage.WindowEvent;
@@ -11,12 +10,10 @@ import java.net.MalformedURLException;
 
 public class StartScreenPresenter {
 
-    private MVPModel model;
     private StartScreenView view;
     private UISettings uiSettings;
 
-    public StartScreenPresenter(Board model, StartScreenView view, UISettings uiSettings) {
-        this.model = model;
+    public StartScreenPresenter(StartScreenView view, UISettings uiSettings) {
         this.view = view;
         this.uiSettings = uiSettings;
         updateView();
@@ -31,12 +28,12 @@ public class StartScreenPresenter {
             @Override
             public void handle(ActionEvent event) {
                 MainScreenView msView = new MainScreenView(uiSettings);
-                MainScreenPresenter msPresenter = new MainScreenPresenter(model, msView, uiSettings);
+                MainScreenPresenter msPresenter = new MainScreenPresenter(msView, uiSettings);
                 view.getScene().setRoot(msView);
                 try {
                     msView.getScene().getStylesheets().add(uiSettings.getStyleSheetPath().toUri().toURL().toString());
                 } catch (MalformedURLException ex) {
-                    // // do nothing, if toURL-conversion fails, program can continue
+                    // do nothing, if toURL-conversion fails, program can continue
                 }
                 msView.getScene().getWindow().sizeToScene();
                 msView.getScene().getWindow().setX(uiSettings.getResX()/20);
@@ -50,12 +47,12 @@ public class StartScreenPresenter {
 
     public void windowsHandler() {
         view.getScene().getWindow().setOnCloseRequest(new EventHandler<WindowEvent>() {
-             @Override
-             public void handle(WindowEvent event) {
-                 final Alert stopWindow = new Alert(Alert.AlertType.ERROR);
-                 stopWindow.setHeaderText("You can not yet close the application.");
-                 stopWindow.setContentText("Try again after the program has started");
-                 stopWindow.showAndWait();
-                 event.consume(); } });
+            @Override
+            public void handle(WindowEvent event) {
+                final Alert stopWindow = new Alert(Alert.AlertType.ERROR);
+                stopWindow.setHeaderText("You can not yet close the application.");
+                stopWindow.setContentText("Try again after the program has started");
+                stopWindow.showAndWait();
+                event.consume(); } });
     }
 }
